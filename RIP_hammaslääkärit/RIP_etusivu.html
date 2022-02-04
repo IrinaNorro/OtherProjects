@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fin">
+<head>
+<title>Ryhmätyö</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
+}
+
+.header {
+  background-image: url("tuoli3.jpg");
+  padding: 50px;
+  text-align: center;
+  font-size: 35px;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+	color: black;
+	size: bold;
+}
+
+.soita {
+  color: #34626c;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.yhteystiedot {
+  color: #34626c;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: left;
+}
+
+/*linkkien lihavointi*/
+a {
+  color: #34626c;
+  font-weight: bold;
+}
+
+/* hederin alapuolinen navigointipalkki*/
+.topnav {
+  overflow: hidden;
+  background-color: #34626c;
+}
+
+/* topnavin linkit */
+.topnav a {
+  float: left;
+  display: block;
+  color: #cfd3ce;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Värit, kun hiiri linkkien päällä */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* luodaan 3 tasalevyistä columnia */
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+  height: 600px
+}
+
+/* jaetaan columnit sektioihin, jotta smoothi skrollaus onnistuu*/
+#section1 {
+  height: 600px;
+}
+
+#section2 {
+  height: 600px;
+}
+
+#section3 {
+  height: 600px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*ajanvaraus-nappula*/
+.buttonAika {
+  background-color: #839b97;
+  border: none;
+  color: white;
+  padding: 25px 120px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  animation: syke 5s infinite;
+}
+
+/*Ajanvaraus-nappulan väri vaihtuu*/
+.buttonAika:hover {
+  background-color: #34626c;
+  color: white;
+}
+
+/*kortti, jossa h-lääkärit. Varjoa */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.kentta {
+  width: 230px;
+}
+
+/*lähetä-nappula*/
+input[type=submit]{
+  width: 100px;
+  height: 40px;
+  background-color: #34626c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  animation: syke 5s infinite;
+}
+
+/*lähetä-nappulan animaation säädöt*/
+@keyframes syke {
+  50% {box-shadow: 10px 20px 30px grey;}
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* tilaa uutiskirje -painike*/
+.open-button {
+  background-color: #34626c;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+  animation: syke 5s infinite;
+}
+
+/* Uutiskirjeen popup-lomake, lomakkeen näkyvyys oletuksena none */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+/* popup-lomakkeen ominaisuudet */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #cfd3ce;
+}
+
+/* popup-lomakkeen email-kenttä */
+.form-container input[type=email], {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Tilaa-painikkeen tyyli */
+.form-container .btn {
+  background-color: #839b97;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+/* peruuta-nappulan väri */
+.form-container .cancel {
+  background-color: #ce6262;
+}
+
+/*columnit mobiiliin*/
+@media only screen and (max-width:620px) {
+  .column {
+   width:100%;
+  }
+}
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h2>RIP HAMMASLÄÄKÄRIT</h2>
+</div>
+
+<div class="topnav" id="myTopnav">
+  <a href="RIP_palvelut.html">Tutustu palveluihimme</a>
+  <a href="RIP_ajanvaraus.html">Varaa aika</a>
+  <a href="#section2">Tutustu lääkäreihimme</a>
+  <a href="#section3">Anna palautetta</a>
+  <a href="#section3">Yhteystiedot</a>
+  <a href="RIP_raportti.html">Ryhmätyön raportti</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="column" id="section1">
+<br>
+<br>
+<a href="RIP_ajanvaraus.html" class="buttonAika">VARAA AIKA VERKOSSA</a>
+<br>
+<br>
+<div class="soita">tai soita
+010 777 000<br>
+</div>
+</div>
+
+<div class="column"><h3>Meillä asioit turvallisesti</h3>
+<p>Haluamme, että meillä on turvallista asioida: olemme mm. tehostaneet tilojemme siivousta ja tehneet toimenpiteitä varmistaaksemme henkilöstömme ja asiakkaidemme suojaamisen.
+<br>
+<br>Yhteisen turvallisuutemme vuoksi suosittelemme kasvomaskin käyttöä aina saapuessasi ja asioidessasi meillä. Oikein käytettynä maski vähentää tartuntariskiä ja suojelee sekä kantajaansa että hänen kohtaamiaan henkilöitä mahdolliselta altistumiselta.</p>
+</div>
+
+<div class="column"><h3>Täyden palvelun hammaslääkäritalo</h3>
+<p>Sorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.
+Sorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.
+<br>
+<br>
+Lue lisää palveluistamme <a href="RIP_palvelut.html">täältä</a>
+<br>
+<br>
+</div>
+
+<h3>Tutustu hammaslääkäreihimme</h3>
+  <div class="column" id="section2">
+    <div class="card">
+      <img src="lekuri1.jpg" alt="Mikko" style="width:100%">
+      <div class="container">
+        <h3>Mikko Mikkola</h3>
+        <p>Sorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+      </div>
+	</div>
+   </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="lekuri2.jpg" alt="Pirkko" style="width:100%">
+	   <div class="container">
+        <h3>Pirkko Pirkkola</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+      </div>
+	 </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="lekuri3.jpg" alt="Jussi" style="width:100%">
+       <div class="container">
+        <h3>Jussi Jussila</h3>
+        <p>Horem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+	  </div>
+	</div>
+  </div>
+
+<h3>Anna palautetta</h3>
+<p>Ajanvaraus vain verkossa tai puhelimitse</p>
+<div class="column" id="section3">
+      <form action="https://printvalues-294008.appspot.com/printvalues" method="post">
+        <label for="etunimi">Etunimi</label>
+			<input type="text" id="enimi" name="etunimi" placeholder="Etunimi">
+        <label for="sukunimi">Sukunimi</label>
+			<input type="text" id="snimi" name="sukunimi" placeholder="Sukunimi">
+        <label for="puhnro">Puhelinnumero</label>
+			<input type="text" id="puhnro" name="puhnro" placeholder="Puhelinnumero">
+        <label for="viesti">Viesti</label>
+			<textarea id="viesti" name="viesti" placeholder="Kirjoita palautteesi tähän..." style="height:150px"></textarea>
+        <input type="submit" value="Lähetä">
+      </form>
+</div>
+
+<div class="column">
+<div class="soita">
+YHTEYSTIEDOT<br>
+<br>
+Kotikatu<br>
+<br>
+33100 TAMPERE<br>
+<br>
+Vaihde: 010 2145<br>
+<br>
+Asiakaspalvelu: 010 2144<br>
+</div>
+</div>
+
+<div class="column">
+<p>Keskitetty puhelinajanvarauksemme palvelee ma-pe klo 8.00-17.00 (poikkeuksena pyhäpäivät).
+<br>
+<br>
+010-numeroon soittaminen lankapuhelimesta maksaa soittajalle 8,35snt/puhelu + 6 snt/min ja matkapuhelimista soitettaessa hinta on 8,35 snt /puhelu + 17,17snt/min. (sis. alv 24 %).</p>
+</div>
+
+<button class="open-button" onclick="tilaaUutiskirje()">Tilaa uutiskirje</button>
+
+<div class="form-popup" id="uutiskirje">
+  <form action="https://printvalues-294008.appspot.com/printvalues" class="form-container" method="post">
+    <h3>Tilaa uutiskirje</h3>
+	<p>Uutiskirjeen tilaajana saat ensimmäisten joukossa ajankohtaista tietoa uusista palveluista ja kuukausittain vaihtuvista tarjouksista.</p>
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="something@example.com" name="email" required>
+    <button type="submit" class="btn">Tilaa</button>
+    <button type="button" class="btn cancel" onclick="suljeLomake()">Sulje</button>
+  </form>
+</div>
+
+<script>
+function tilaaUutiskirje() {
+  document.getElementById("uutiskirje").style.display = "block";
+}
+
+function suljeLomake() {
+  document.getElementById("uutiskirje").style.display = "none";
+}
+</script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>

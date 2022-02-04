@@ -1,0 +1,308 @@
+
+body{
+
+    margin:0;
+    font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
+}
+/******* CLASS ELEMENTS*********/
+.header {
+    background-image: url(header-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    text-align: center;
+    color: #cfd3ce;
+    font-size: auto;
+}
+
+.navigaattori {
+    overflow: hidden;
+    background-color: #34626C;
+}
+
+.navigaattori a  {
+    float: left;
+    display: block;
+    color: #cfd3ce;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /*LINKKIEN ALLEVIIVAUKSET POIS*/
+}
+
+.navigaattori a.active  {
+    background-color: #839B97;
+    color: black;
+}
+.navigaattori a:hover:not(.active){
+    background-color: #839B97;
+}
+
+.vasen{
+    float:left;
+    width: 20%;
+    /*max-width: 100%        MOBIIILI KÄYTTÖÖN */
+    height: 500px;
+}
+.vasen a   {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /*LINKKIEN ALLEVIIVAUKSET POIS*/
+}
+.vasen a.active   {
+    background-color: #839B97;
+    color: black;
+}
+.vasen a:hover:not(.active){
+    background-color: #839B97;
+}
+
+.keski{ /* VASEN LOMAKE*/
+
+    float:left;
+    width: 35%;
+    height: 500px;
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 120px;
+    padding-bottom: 20px;
+
+}
+
+.oikea{ /* OIKEA LOMAKE*/
+    float:left;
+    margin-left: 500px;
+    width: 70%;
+    height: 500px;
+    position: relative;
+}
+
+
+.alapalkki {                  /*ei näy??*/
+    background-color: #839B97;
+    margin-top: 550px;
+    width: 100%;
+    height: 80px;
+}
+.alapalkki p{
+    color: #cfd3ce;
+    text-align: center;
+    padding: 10px;
+}
+
+/*** LOMAKKEEN MUOTOILUT  ***/
+.lomake{
+    margin-left: 20px;
+}
+
+body, div, form, input, select, textarea {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family:  Arial, sans-serif;
+    font-size: 16px;
+    color: #495464; /*fontti väri*/
+}
+
+input, select {
+    padding: 5px;
+    margin-bottom: 15px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #495464;
+    width: 50%;
+}
+
+.oikea input {
+
+    width: 25%;
+}
+.oikea button {
+    width: 15%;
+}
+input::placeholder {
+    color: #495464;
+}
+textarea{
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #bbbfca;
+    border-radius: 4px;
+}
+textarea::placeholder {
+    color: #495464;
+}
+input:hover, textarea:hover,
+select:hover, button:hover,
+.btn-item:hover {
+    background: #bbbfca;
+}
+
+button {
+    padding: 10px 5px;
+    margin-top: 15px;
+    margin-left:50px;
+    border-radius: 5px;
+    border: none;
+    background: #495464; /*napin taustaväritys*/
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #f4f4f2; /* napin fonttiväri */
+    width: 30%;
+}
+
+.oikea_ala button{
+    width: 15%;
+}
+ .oikea_ala button{
+    padding: 15px 10px;
+
+    margin-left:50px;
+    border-radius: 5px;
+    border: none;
+    background: #495464; /*napin taustaväritys*/
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #f4f4f2; /* napin fonttiväri */
+ }
+ .oikea_ala button:hover,
+ .btn-item:hover {
+     background: #bbbfca;
+ }
+ .oikea_ala button a{
+     text-decoration: none;
+     color: #f4f4f2;
+ }
+.checkbox{
+    margin-left: -100px;
+}
+.fas.fa-eye{
+  margin-left: -80px;
+}
+.tooltip {
+  position: relative;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color:#f4f4f2;
+  color: red;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+   z-index: 1;
+   bottom: 100%;
+   left: 50%;
+   margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* .salasana i {
+    margin-left: -30px;
+    cursor: pointer;
+} */
+/* .tooltip i { 
+    margin-left: -30px;
+    cursor: pointer;
+} */
+i { /***KOKEILU**/
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+/************************HINTA-ARVIO -SIVUN TYYLIT **********************************''*/
+
+
+.arvio{ /* hinta-arvio sivun LOMAKE*/
+
+    float:left;
+    width: 70%;
+    height: 600px;
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 120px;
+    padding-bottom: 20px;
+}
+.alapalkki_arvio{
+    background-color: #34626c;
+    margin-top: 650px;
+    width: 100%;
+    height: 80px;
+}
+.alapalkki_arvio p{
+    color: #cfd3ce;
+    text-align: center;
+    padding: 10px;
+}
+.arvio input.hinta{
+    width: 30%;
+    padding: 6px;
+    border: 1px solid #34626C;
+    border-radius: 2px;
+    resize: vertical;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+.arvio input.numero {
+    width: 10%;
+    padding: 6px;
+    border: 1px solid #34626C;
+    border-radius: 2px;
+    resize: vertical;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+.arvio input.painike {
+    background-color: #839B97;
+    margin: 2px;
+    border: none;
+    color: white;
+    padding: 6px;
+    width: 8%;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.arvio input{
+    padding: 5px;
+    margin-bottom: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #495464;
+    width: 25%;
+    align: center;
+}
+.arvio input.painike:hover {
+    background-color: #34626C;
+}
+.arvio input[type=button]:hover {
+    background-color: #34626C;
+}
+.arvio button{
+  float: right;
+  width: 20%;
+  margin-right: 80px;
+
+}
+ td {
+  text-align: center;
+  vertical-align: middle;
+}
+th{
+  padding-bottom: 10px;
+}

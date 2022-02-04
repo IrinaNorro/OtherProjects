@@ -1,0 +1,241 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-image: url(tuoli3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    text-align: left;
+    font-size: auto;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #34626C;
+}
+
+.topnav a {
+    position: relative;
+    float: left;
+    display: block;
+    border-radius: 6px;
+    color: snow;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a.active {
+    background-color: #839B97;
+    color: black;
+}
+
+.topnav a:hover:not(.active) {
+    background-color: #839B97;
+}
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.column {
+    padding: 10px;
+}
+
+.column.side {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0;
+    padding: 4px;
+}
+
+.column.middle {
+    -webkit-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+    padding: 1px 16px;
+}
+
+
+.column.side a {
+    margin-left: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
+    border-radius: 6px;
+    color: #34626C;
+    text-align: left;
+    text-decoration: none;
+    border-right: solid #34626C 2px;
+    border-bottom: solid #34626C 2px;
+
+}
+
+.column.side a.active {
+    background-color: #CFD3CE;
+    color: black;
+}
+
+.column.side a:hover:not(.active) {
+    background-color: #CFD3CE;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    background-color: #34626C;
+    color: white;
+    font-size: small;
+    padding: 10px;
+    text-align: left;
+}
+
+h2 {
+    color: white;
+}
+
+input[type=text] {
+    width: 60%;
+    padding: 6px;
+    border: 1px solid #34626C;
+    border-radius: 2px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+input[type=date] {
+    width: 40%;
+    padding: 6px;
+    border: 1px solid #34626C;
+    border-radius: 2px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+select {
+    width: 40%;
+    padding: 6px;
+    border: 1px solid #34626C;
+    border-radius: 2px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+    width: 60%;
+    padding: 2px;
+    border: 1px solid #34626C;
+    border-radius: 2px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+label {
+    padding: 6px 12px 12px 0;
+    display: inline-block;
+  }
+
+.col-kysely-25 {
+    float: left;
+    width: 25%;
+}
+
+.col-kysely-75 {
+    float: left;
+    width: 75%;
+}
+
+.col-hoitokok-1 {
+    float: left;
+    width: 60%;
+}
+
+.col-hoitokok-2 {
+    float: left;
+    width: 40%;
+}
+
+.col-hoitokok-2 input[type=text] {
+    width: 10%;
+    padding: 6px;
+    border: 1px solid #34626C;
+    border-radius: 2px;
+    resize: vertical;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.col-hoitokok-2 input[type=button] {
+    background-color: #34626C;
+    margin: 2px;
+    border: none;
+    color: white;
+    padding: 6px;
+    width: 4%;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.col-hoitokok-2 input[type=button]:hover {
+    background-color: #839B97;
+}
+
+.button {
+    background-color: #34626C;
+    margin-left: 4px;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+
+}
+
+.button:hover {
+    background-color: #839B97;
+}
+
+ul.listat {
+    list-style-type: square;
+}
+
+th {
+    text-align: left;
+    font-size: medium;
+    color: royalblue;
+}
+
+td {
+    border-top: #34626C solid 2px;
+    padding: 4px;
+}
+
+
+@media (max-width: 600px) {
+
+.row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+}

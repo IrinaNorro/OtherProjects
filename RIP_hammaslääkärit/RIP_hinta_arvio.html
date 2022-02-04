@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RIP Hammaslääkärit</title>
+        <link rel="stylesheet" href="RIP_ajanvaraus_styles.css">
+
+        <script src="https://kit.fontawesome.com/fcfe52471d.js" crossorigin="anonymous"></script>
+
+  </head>
+    <body>
+  <div class="header">
+        <h1>RIP HAMMASLÄÄKÄRIT</h1>
+        <p >Palvelemme sinua myös numerosta 010 777 000 ma-pe klo 08-18.00. <br>
+        </p>
+  </div>
+
+  <div class="navigaattori">
+        <a class="" href="RIP_etusivu.html"> Etusivulle</a>
+        <a class="" href="RIP_palvelut.html">Tutustu palveluihimme</a>
+        <a class="" href="RIP_ajanvaraus.html"href="">Varaa aika</a>
+        <a class="" href="RIP_etusivu.html#section3"> Ota yhteyttä</a>
+        <a style="float: right;" href="RIP_raportti.html">Raportti</a>
+        <a class="active" href="RIP_HINTA_ARVIO.html"href="">Hinta-arvio</a>
+  </div>
+
+  <div class="vasen">
+        <a class="" href="RIP_palvelut_asiakastyytyvaisyys.html"> Asiakastyytyväisyykysely</a> <br><!--LISÄÄ LINKKI -->
+  </div>
+
+        <div class="arvio">
+        <h3>Laske hinta-arvio suun hoidon kokonaistustannuksista tai yksittäisistä käynneistä</h3>
+        <form id="tilauslomake" action="index.html" method="post">
+          <table>
+            <tr>
+              <th>Palvelu</th>
+              <th>Palvelun hinta</th>
+              <th>Käyntien määrä</th>
+              <th>Yhteensä</th>
+            <tr>
+              <th>Suun perustutkimus</th>
+                  <td><input class="hinta" type="text" name="yksikkohinta1" value="78.00" readonly></td>
+                  <td>
+                  <input class="painike" type="button" value="-" onclick="vahenna(this.form.maara1);">
+                  <input class="numero" type="text" name="maara1" value="0">
+                  <input class="painike"type="button" value="+" onclick="lisaa(this.form.maara1);">
+                  </td>
+                  <td><input class="hinta"  type="text" name="yht1" value="0" readonly></td>
+            <tr>
+              <th>Röntgenkuvaus alk.</th>
+                  <td><input class="hinta" type="text" name="yksikkohinta2" value="60.00" readonly></td>
+                  <td>
+                  <input class="painike"type="button" value="-" onclick="vahenna(this.form.maara2);">
+                  <input class="numero" type="text" name="maara2" value="0">
+                  <input class="painike"type="button" value="+" onclick="lisaa(this.form.maara2);">
+                  </td>
+                  <td><input class="hinta" type="text" name="yht2" value="0" readonly></td>
+            <tr>
+              <th>Hammaskiven poisto alk.</th>
+                  <td><input class="hinta" type="text" name="yksikkohinta3" value="104.00" readonly></td>
+                  <td>
+                  <input class="painike"type="button" value="-" onclick="vahenna(this.form.maara3);">
+                  <input class="numero" type="text" name="maara3" value="0">
+                  <input class="painike"type="button" value="+" onclick="lisaa(this.form.maara3);">
+                  </td>
+                  <td><input class="hinta"  type="text" name="yht3" value="0" readonly></td>
+            <tr>
+              <th>Hampaan paikkaus alk.</th>
+                  <td><input class="hinta" type="text" name="yksikkohinta4" value="101.00" readonly></td>
+                  <td>
+                  <input class="painike"type="button" value="-" onclick="vahenna(this.form.maara4);">
+                  <input class="numero" type="text" name="maara4" value="0">
+                  <input class="painike"type="button" value="+" onclick="lisaa(this.form.maara4);">
+                  </td>
+                  <td><input class="hinta"  type="text" name="yht4" value="0" readonly></td>
+
+            <tr>
+              <th>Hampaan poisto alk.</th>
+                  <td><input class="hinta" type="text" name="yksikkohinta5" value="108.00" readonly></td>
+                  <td>
+                  <input class="painike"type="button" value="-" onclick="vahenna(this.form.maara5);">
+                  <input class="numero" type="text" name="maara5" value="0">
+                  <input class="painike"type="button" value="+" onclick="lisaa(this.form.maara5);">
+                  </td>
+                  <td><input class="hinta"  type="text" name="yht5" value="0" readonly></td>
+
+              <tr>
+              <th>Toimistopalvelumaksu</th>
+                  <td><input class="hinta" type="text" name="yksikkohinta6" value="13.00" readonly></td>
+                  <td>
+                  <input class="painike"type="button" value="-" onclick="vahenna(this.form.maara6);">
+                  <input class="numero" type="text" name="maara6" value="0">
+                  <input class="painike"type="button" value="+" onclick="lisaa(this.form.maara6);">
+                  </td>
+                  <td><input class="hinta"  type="text" name="yht6" value="0" readonly></td>
+            </tr>
+<div class="yhteensa">
+
+
+            <tr>
+              <th  colspan="3">Yhteensä</th>
+              <td><input class="hinta" type="text" name="yhteensa" value="0" readonly></td>
+            </tr>
+  </div>
+          </table>
+          <!-- <input type="button" name="laskepainike" value="Laske arvio" onclick="laske(this.form);"> -->
+          <button type="button" name="laskepainike"value="Laske arvio" onclick="laske(this.form);">Laske arvio</button>
+        </form>
+
+    </div>
+
+
+
+
+<div class="alapalkki_arvio">
+        <p>RIP-Hammaslääkärit Oy <br>
+            Kotikatu 1<br>
+            33100 Tampere<br>
+
+        </p>
+</div>
+<script type="text/javascript">
+
+
+function laske(lomake){
+  yht1=lomake.yksikkohinta1.value*lomake.maara1.value;
+  lomake.yht1.value=yht1;
+
+  yht2 = lomake.yksikkohinta2.value*lomake.maara2.value;
+  lomake.yht2.value=yht2;
+
+  yht3 = lomake.yksikkohinta3.value*lomake.maara3.value;
+  lomake.yht3.value=yht3;
+
+  yht4 = lomake.yksikkohinta4.value*lomake.maara4.value;
+  lomake.yht4.value=yht4;
+
+  yht5 = lomake.yksikkohinta5.value*lomake.maara5.value;
+  lomake.yht5.value=yht5;
+
+  yht6 = lomake.yksikkohinta6.value*lomake.maara6.value;
+  lomake.yht6.value=yht6;
+
+  yht=yht1+yht2+yht3+yht4+yht5+yht6;
+  lomake.yhteensa.value=yht;
+}
+
+
+
+function vahenna(elementti){
+  elementti.value = elementti.value-1;
+  if (elementti.value<0){
+    elementti.value = 0;
+  }
+  laske(tilauslomake);
+}
+
+
+function lisaa(elementti){
+  elementti.value = Number(elementti.value)+1;
+  laske(tilauslomake);
+}
+</script>
+
+  </body>
+</html>
+<!-- <script src="RIP_ajanvaraus.js" charset="utf-8"> </script> -->

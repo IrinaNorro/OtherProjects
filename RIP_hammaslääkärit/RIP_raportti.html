@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>RIP-palvelut</title>
+        <link rel="stylesheet" type="text/css" href="RIP_tyylit.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <h2>RIP Hammaslääkärit</h2>
+    </div>
+
+    <div class="topnav">
+          <a href="RIP_etusivu.html">Etusivu</a>
+          <a class="active" href="RIP_palvelut.html">Palvelut</a>
+          <a href="RIP_ajanvaraus.html">Ajanvaraus</a>
+            <a style="float: right;" href="RIP_raportti.html">Raportti</a>
+    </div>
+<div class="row">
+    <div class="column side">
+        <a href="RIP_palvelut_asiakastyytyvaisyys.html">Asiakastyytyväisyyskysely</a>
+        <a href="RIP_palvelut_perushoito.html">Perushammashoito</a>
+        <a href="RIP_palvelut_esteettinen.html">Esteettinen hammashoito</a>
+        <a href="RIP_palvelut_suujaleuka.html">Suu- ja leukakirurgia</a>
+        <a href="RIP_palvelut_lapset.html">Lasten hammashoito</a>
+        <a href="RIP_palvelut_suuhygienisti.html">Suuhygienistipalvelut</a>
+        <a href="RIP_palvelut_hinnasto.html">Hinnasto</a>
+    </div>
+
+    <div class="column middle">
+        <h3>Johdanto</h3>
+        <p>Harjoitustyönä on toteutettu hammaslääkäripalveluita tarjoavan RIP-Hammaslääkärit www-sivusto. Ryhmään kuuluivat Irina Norro (ajanvarauslomake), Riitta Vaartio (etusivu) ja Petri Rantanen (palvelut).
+        </p>
+        <h3>Etusivu - Riitta Vaartio</h3>
+        <p> Etusivu koostuu yhdestä sivusta, jossa on header, navigointipalkki ja kolme tasalevyistä kolumnia. Kolumnit on jaettu kolmeen sectioniin, mikä mahdollistaa siirtymisen sectioneiden välillä linkeillä.</p>
+		
+		<p>Headerin kuva, samoin kuin lääkäreiden kuvat, on ladattu pixabay.comista. Värimaailmaksi on valittu colorhunt.co -sivun väripaletti 220246.</p>
+
+		<p>Navigointipalkin linkeistä pääsee muiden ryhmäläisten sivuille (Tutustu palveluihimme ja Varaa aika). Ryhmätyön raportti -linkki avaa sivun, josta raportti löytyy. Linkit Tutustu lääkäreihimme, Anna palautetta ja 
+			Yhteystiedot siirtyvät etusivulla alempana oleviin tietoihin. Siirtymä on toteutettu käyttämällä section-jakoa. Navigointipalkin linkit on muotoiltu hover-toiminnallisuudella vaihtamaan väriä hiiren ollessa niiden päällä.  </p>
+		
+		<p> Sisältöosion painikkeissa on käytetty animointia, joka saa painikkeet ”sykkimään”.</p>
+		
+		<p>Tilaa uutiskirje -pop upissa painikkeen ja lomakkeen sijainti on fixed, joten painike ja lomake pysyvät sivun oikeassa alareunassa koko ajan. Lomakkeen avautuminen on toteutettu siten, että painamalla Tilaa uutiskirje -painiketta kutsutaan 
+		tilaaUutiskirje-funktiota, joka näyttää lomakkeen. Sähköpostin input typeksi on määritelty ”email”, minkä johdosta inputin arvo tarkistetaan ja annetaan huomautus, mikäli syötetty email-osoite ei ole oikean muotoinen. Email-kenttä on myös asetettu 
+		pakolliseksi tiedoksi (required). Tilaa-painike lähettää lomakkeen tiedot tehtävänannossa annettuun osoitteeseen. Sulje-painike kutsuu funktiota suljeLomake, joka piilottaa lomakkeen. </p>
+	   
+		<p> Sopivuus mobiililaitteille on toteutettu mediakyselyillä (media queries). Kolumnit siirtyvät allekkain ja navigointipalkin linkit siirtyvät hampurilaisvalikon taakse, kun leveys on 600px tai vähemmän. Mobiilinäkymästä ei ole piilotettu sisältöä. 
+		Mobiilisopivuus on tehty kopioimalla koodit ja scriptit w3schools-sivuilta.</p>
+	   
+	   <h3>Palvelut - Petri Rantanen</h3>
+        <p>Palvelut -sivu koostuu yhteensä kahdeksasta eri html -sivusta (Palvelut, Asiakastyytyväisyyslomake, Perushoito, Esteettinen hammashoito, Suu- ja leukakirurgia, Lasten hammashoito, Suuhygienisti sekä
+            Hinnastotaulukosta).
+        </p>
+        <p>
+            Sivujen rakenne sisältää headerin, navigointi palkin, sisältö osion ja footerin. Sisältöosio on jaettu kahteen eri kolumniin jossa sivukolumnissa on navigointi muille alasivuille sekä keskikolumni,
+            jossa itse sivun sisältö esitetään.
+        </p>
+        <p>Koko sivuston tyylitykseen on käytetty CSS-formaattia ja tyylit löytyvät omasta RIP_tyylit.css -tiedostostaan. Asiakastyytyväisyyslomakkeessa on javascript-koodia, joka löytyy tiedostosta RIP_javat.js.
+        </p>
+        <p>Sivuston mobiilimäärityksiin on käytetty CSS flex-direction toiminnallisuutta, joka kasaa sisältö sivun kolumnit päällekkäin, kun käytettävän näytön leveys on 600px tai vähemmän. Mobiiliyhteensopivuutta
+            on testattu Chrome selaimessa F12 painikkeen takaa löytyvässä editorissa.
+        </p>
+        <p><b>Header, navigointipalkki ja footer</b><br>
+            Header koostuu taustakuvasta, joka on määritelty toimimaan koko headerin alueella. Lisäksi headeriin on laitettu jokaisella eri alisivulla toistuva RIP-Hammaslääkärit nimi.
+        </p>
+        <p>
+            Navigointipalkista löytyy linkit etusivulle, palvelut sivun ”pääsivulle” ja ajanvarauslomakkeelle. Navigointipalkkiin on määritelty css -tyylitiedostossa hover ominaisuus linkkien kohdalle sekä aktiivisen
+            sivun osoittava ominaisuus. Footeriin on lisätty yrityksen kuvitteelliset yhteystiedot sekä muutettu tekstin väritystä ja fonttikokoa muuten sivustolla käytettävästä.
+        </p>
+        <p><b>Sisältöosio</b><br>
+            Sisältöosio on jaettu kaikissa muissa sivuissa paitsi Asiakastyytyväisyyslomakkeella kahteen kolumniin. Vasen kolumni sisältää navigoinnin muille Palvelut sivuille ja siellä on myös käytetty hover
+            toimintoa osoittamaan minkä linkin päällä hiiri on sekä aktiivisen sivun osoittavaa ominaisuutta.
+        </p>
+        <p>
+            Sisältöosion toisessa kolumnissa on ko. sivuston osan sisältö. Muilla paitsi Asiakastyytyväisyys ja Hinnasto sivuilla, sisältö on eri palveluiden esittelytekstiä. Hinnasto sivulla sisältö on
+            taulukko, johon tuotu eri palveluiden hinnat. Hinnastoa on tyylitelty lisäämällä sinne jokaisen rivin yläviiva ja muuttamalla otsikkorivin fontin kokoa sekä väriä.
+        </p>
+        <p>
+            Asiakastyytyväisyyslomakkeella sisällölle varattu keskikolumni on jaettu vielä kertaalleen kahteen uuteen kolumniin. Vasemman kolumnin sisällä on täytettävän kentän nimi ja oikeassa kolumnissa itse kenttä.
+            Nimi, hoito alkoi, hoito loppui ja vapaa palaute kenttiin on lisätty javascriptilla kentän korostus toiminto, joka muuttaa kentän taustavärin, kun osoitin viedään siihen. Hoitaneen lääkärin
+            valintaan on lisätty alasvetovalikko, josta lääkärin nimi voidaan valita. Vapaa palaute kenttään on laitettu merkkien maksimimääräksi 800 merkkiä. Hoito alkoi ja hoito loppui pvm kentät on
+            laitettu pakollisiksi.
+        </p>
+        <p>
+            Asiakastyytyväisyyslomakkeen toinen osa koostuu palvelun arvioinnista. Tämänkin osan sisältöosio sivustossa on jaettu kahteen eri suuruiseen kolumniin. Vasemmassa kolumnissa on väittämä ja oikeassa annetaan
+            arvosana. Arvosanan valinta tehdään +/- painikkeilla, joihin on lisätty javascriptilla rajoite, että arvosana voi olla 0-5 välillä. Arvosanan voi myös syöttää suoraan painikkeiden välissä olevaan
+            kenttään. Syötön taakse on lisätty javascriptilla tarkistus, että annettu numero on välillä 0-5. Mikäli yrittää syöttää pienempää tai suurempaa lukua, tulee pop-up ikkunaan huomautus ja kentän
+            arvoksi palautetaan 0. Kirjainten syöttö on estetty javascriptilla. 
+        </p>
+        <p>
+            Asiakastyytyväisyyslomakkeesta löytyy kaksi painiketta; Tyhjennä lomake ja Lähetä palaute. Tyhjennä lomake nimensä mukaisesti palauttaa lomakkeen nollatilaan eli poistaa kaikki siihen tehdyt muutokset.
+            Lähetä palaute painikkeesta tulee uusi pop-up -ikkuna, jossa käyttäjältä varmistetaan, että hän varmasti haluaa lähettää palautteen, ennen kuin palaute lähtee eteenpäin.
+        </p>
+        <h3>Ajanvarauslomake - Irina Norro</h3>
+
+        <p> Tein ajanvaraussivun (RIP_ajanvaraus.html), jossa on kaksi lomaketta. Nettisivulla on header-osio,
+            jossa kuva ja
+            yrityksen "logo", headerin alla navigaattori -palkki, jossa linkkejä toisille sivuille,
+            kolme pääosastoa, joissa sisältöjä (kolumnityyppisiä), yhdessä (.vasen) yksi linkki,
+            toisessa (.keski) yksi lomake ja kolmannessa (.oikea) toinen lomake, ja yksi footer osio.</p>
+  
+  
+  
+            <p>Vasemmanpuoleinen lomake on uusille asiakkaille,
+            jossa varataan aika haluamaan palveluun ja luodaan samalla tunnukset. Lomakkeen kaikki kentät
+            täytyy täyttää (html required), ennen kuin lomake voidaan lähettää eteenpäin, lomakkeen kentät
+            on koodattu html pattern koodeja käyttämällä, esim email kentässä tiedon täytyy olla syötettynä
+            muodossa merkkejä@merkkejä.vähintäänkaksimerkkiä, puhelinnumeron täytyy olla 10 merkkiä pitkä
+            (html pattern).
+  
+            Toinen lomake on vanhoille asiakkaille sisäänkirjautumissivuna. Siihen täytyy syöttää tietoja
+            pyydetyssä muodossa (html pattern) ja tietojen lähetys menee eteenpäin opettajan antamaan
+            osoitteeseen.
+  
+            Ajanvaraussivun tyylit on laitettu omaan (RIP_ajanvaraus_styles.css) tiedostoon.
+            Ajanvarausssivun javascriptit löytyy omasta tiedostosta (RIP_ajanvaraus.js).
+  
+            </p>
+            <p>JAVASCRIPT KOODIT  <br>
+              Salasanan vahvistuksessa käytetty JavaScript-
+            koodia, salasanan ja vahvistetun salasanan täytyy olla samoja ennen kuin lomake lähtee eteenpäin.
+            Lähetä painiketta painamalla lomake lähtee opettajan antamaan osoitteeseen, jos kaikissa kentissä
+            on tietoja ja syötetty pyydetyssä muodossa.</p>
+            <p>
+            Salasana-kentän alapuolella on täppä ja silmän kuva, salasanan saa näkyviin painamalla täppää
+            silmän vieressä.
+  
+  
+        </p>
+          <p>  OPPIMISEN PAIKKA <br>
+            Lähdin tavoittelemaan aika haastavaa lomakkeen koodia. Halusin tehdä sellaisen lomakkeen, jossa
+            kenttä muuttuu vihreäksi kun syötetty tieto on oikeassa muodossa (esim email -kentässä syötetty
+            muodossa osoite@sana.domain) ja kenttä muuttuu punaiseksi, jos tietoja syötetty väärässä muodossa.
+            Lisäksi, kentän alapuolelle tulisi kommentti, missä muodossa tietoja odotetaan syötettävän.
+            Sain opettajan opastuksella osittain toimimaan, mutta luovuin tästä ominaisuudesta, kun en
+            saanut toimimaan kaikissa kentissä.
+          </p>
+            <p>Huomasin, että koodit toimii osittain sivuilla
+            ja osittain sivu meni rikki ja muotoilut meni sekaisin. Jouduin rakentamaan sivuja monta kertaa ja jossain
+            vaiheessa opin ottamaan backup kopioita ennen kuin lähdin tekemään seuraavia muutoksia muotoiluihin tai koodiin.
+            Virheiden etsiminen oli hankalaa kun lisäili netistä löydettyjä  koodin pätkiä omien muotoilujen päälle.
+            Asia olisi ehkä ollut toisin, jos olisi ollut perusymmärrys
+            sivun rakentamisen perusteista. Varsinkin javascript puoli on itselle jäänyt melko ohueksi.
+  
+            </p>
+            <p>Hieman on puutteita sivulla. En saanut sitä toimimaan mobiilissa. Kokeilin koodeja mitä löysin netistä, ne
+              vain rikkoi sivut, ja kokeilin opettajan antamaa hampurilaiskoodia, sekään ei tehnyt ihmeitä.
+              Lomakkeiden kentät kapenee liikaa, vasemman puoleisen kolumnin linkki menee lomakkeen päälle ym.
+              Luin myös tehtävänannon liian kiireesti. Huomasin etten tehnyt tilauslomaketta vaan tavallisen lomakkeen.
+              Sain siihen liitettyä kuitenkin pari javascript koodia.
+            </p>
+    </div>
+
+</div>
+    <div class="footer">
+        <p>RIP-Hammaslääkärit Oy <br>
+        Kotikatu 1<br>
+        33100 Tampere<br>
+        </p>
+    </div>
+
+</body>
+
+</html>

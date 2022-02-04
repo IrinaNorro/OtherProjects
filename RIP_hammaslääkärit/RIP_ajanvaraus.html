@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RIP Hammaslääkärit</title>
+        <link rel="stylesheet" href="RIP_ajanvaraus_styles.css">
+
+        <script src="https://kit.fontawesome.com/fcfe52471d.js" crossorigin="anonymous"></script>
+<script src="RIP_ajanvaraus.js" charset="utf-8"> </script>
+  </head>
+    <body>
+  <div class="header">
+        <h1>RIP HAMMASLÄÄKÄRIT</h1>
+        <p >Palvelemme sinua myös numerosta 010 777 000 ma-pe klo 08-18.00. <br>
+        </p>
+  </div>
+
+  <div class="navigaattori">
+        <a class="" href="RIP_etusivu.html"> Etusivulle</a>
+        <a class="" href="RIP_palvelut.html">Tutustu palveluihimme</a>
+        <a class="active" href="RIP_ajanvaraus.html"href="">Varaa aika</a>
+        <a class="" href="RIP_etusivu.html#section3"> Ota yhteyttä</a>
+        <a class="" href="RIP_hinta_arvio.html"> Hinta-arvio</a>
+        <a style="float: right;" href="RIP_raportti.html">Raportti</a>
+  </div>
+
+  <div class="vasen">
+        <a class="" href="RIP_palvelut_asiakastyytyvaisyys.html"> Asiakastyytyväisyykysely</a> <br>
+  </div>
+
+  <form  class="lomake" id="lomake_1" name="lomake_1" action="#"
+        method="post">
+
+  <div class="keski">
+
+        <h3>Uusi asiakas LUO TUNNUS</h3>  <br>
+  <div class="">
+        <input class="etunimi" type="text" name="Etunimi" placeholder="Etunimi" autofocus required> <br>
+  </div>
+  <div class="">
+        <input class="sukuimi" type="text" name="Sukunimi" placeholder="Sukunimi" required> <br>
+  </div>
+  <div class="tooltip">
+    <span class="tooltiptext">Syötä muodossa osoite@domain.com.</span>
+        <input id="email" type="text" name="email" placeholder="Sähköposti" required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <br>
+        <div id="email_error"></div>
+  </div>
+  <div class="tooltip">
+    <span class="tooltiptext">Syötä muodossa 050 1234567. Syötä 10 merkkiä, vain numeroita</span>
+        <input class="tel" type="tel" name="Puhelinnumero" placeholder="Puhelinnumero" required
+        pattern="[0-9]{10}"> 
+        <br>
+   </div>
+   <div class="valikko">
+        <select name=" " required >
+         <option value="" > Valitse palvelu* </option>
+         <optgroup label='Perustarkastukset'>
+             <option value="1">Hammassärky- tai tapaturma</option>
+             <option value="2">Perustarkastukset</option>
+             <option value="3">Paikkaus</option>
+             <option value="4">Hammaskiven poisto</option>
+             <option value="5">Juurihoito</option>
+             <option value="6">Iensairaudet</option>
+             <option value="7">Röntgen palvelut</option>
+             <option value="Muu">Muu</option>
+        <optgroup label='Esteettinen hammashoito'>
+              <option value="1">Esteeettinen korjaus</option>
+              <option value="2">Keraamiset paikat</option>
+              <option value="3">Oikomishoidot</option>
+              <option value="4">Hampaiden valkaisu</option>
+              <option value="4">Hampaiden puhdistus</option>
+        <optgroup label='Lasten hammashoito'>
+              <option value="1">Perustarkastukset</option>
+              <option value="2">Oikomishoito</option>
+              <option value="3">Hammastapaturmat</option>
+              <option value="4">Purentaongelmien hoito</option>
+       </select><br>
+   </div>
+   <div class="kalenteri">
+        <input type="date" id="kalenteri" name="Valitse päivämäärä">
+   </div>
+   <div class="teksti">
+        <textarea name="teksti" rows="2" cols="20"placeholder="Lisätietoja"></textarea><br>
+   </div>
+
+
+  <div class="tooltip">
+         <span class="tooltiptext">Syötä isoja ja pieniä kirjaimia, numero tai erikoismerkki.</span>
+           <input name="password" id="password_1" type="password" placeholder="Salasana" required
+           pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+           <br><!-- Salasanan pitää olla väh 8 merkkiä pitkä, sisältää pieniä ja isoja kirjaimia,
+           numeroita tai yhden erikoismerkin. -->
+
+  </div>
+
+            <input class="checkbox" type="checkbox" onclick="myFunction()">
+            <i class="fas fa-eye"></i>
+
+
+
+
+   <div id="pass_confirm_div">
+       <input type="password" name="confirm_password" id="confirm_password"
+       placeholder="Vahvista salasana" required/>
+       <br>
+   <div id="password_error"></div>
+   </div>
+
+   <div class="">
+        <button onclick="return Validate(this.form);" type="submit" href="/"
+        formaction='https://printvalues-294008.appspot.com/printvalues'>Lähetä tiedot</button
+        ><br>
+    </div>
+
+    <div class="">
+        <button type="submit" href="/" onclick="this.form.reset();" >Tyhjennä lomake</button><br>
+    </div>
+
+ </form>
+</div><!--* .keski päättyy*/-->
+
+ <form  class="lomake_2" id="lomake_2" action="https://printvalues-294008.appspot.com/printvalues" method="post">
+ <div class="oikea">
+
+        <h3>Kirjaudu palveluun</h3> <br>
+        <div class="tooltip">
+          <span class="tooltiptext">Syötä muodossa osoite@domain.com.</span>
+        <input type="text" name="name" id="email_2" placeholder="Sähköpostiosoite" required>
+        <br>
+   </div>
+   <div class="">
+         <input name="password" id="password_2" type="password" placeholder="Salasana" required/>
+         <br>
+   </div>
+   <div class="">
+         <button type="submit" href="/" formaction='https://printvalues-294008.appspot.com/printvalues'>Kirjaudu</button><br>
+   </div>
+   <br>
+   <div class="oikea_ala">
+     <h3>Laske hinta-arvio suun hoidon</h3>
+     <h3>kokonaistustannuksista tai yksittäisistä</h3>
+     <h3>käynneistä</h3>
+
+     <button><a href="RIP_hinta_arvio.html">Hinta-arvioon</a></button>
+   </div>
+ </div> <!--* .oikea päättyy*/-->
+
+ </form>
+
+
+<!--
+<div class="alapalkki">
+        <p>RIP-Hammaslääkärit Oy <br>
+            Kotikatu 1<br>
+            33100 Tampere<br>
+        </p>
+</div> -->
+
+
+
+
+
+  </body>
+</html>
+<script src="RIP_ajanvaraus.js" charset="utf-8"> </script>

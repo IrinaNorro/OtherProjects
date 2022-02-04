@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>RIP-Asiakastyytyväisyyskysely</title>
+        <link rel="stylesheet" type="text/css" href="RIP_tyylit.css">
+        <script src="RIP_javat.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h2>RIP Hammaslääkärit</h2>
+    </div>
+
+    <div class="topnav">
+        <a href="RIP_etusivu.html">Etusivu</a>
+        <a class="active" href="RIP_palvelut.html">Palvelut</a>
+        <a href="RIP_ajanvaraus.html">Ajanvaraus</a>
+        <a style="float: right;" href="RIP_raportti.html">Raportti</a>
+    </div>
+<div class="row">
+    <div class="column side">
+        <a class="active" href="RIP_palvelut_asiakastyytyvaisyys.html">Asiakastyytyväisyyskysely</a>
+        <a href="RIP_palvelut_perushoito.html">Perushammashoito</a>
+        <a href="RIP_palvelut_esteettinen.html">Esteettinen hammashoito</a>
+        <a href="RIP_palvelut_suujaleuka.html">Suu- ja leukakirurgia</a>
+        <a href="RIP_palvelut_lapset.html">Lasten hammashoito</a>
+        <a href="RIP_palvelut_suuhygienisti.html">Suuhygienistipalvelut</a>
+        <a href="RIP_palvelut_hinnasto.html">Hinnasto</a>
+    </div>
+
+    <div class="column middle">
+        <h3>Asiakastyytyväisyyskysely</h3>
+        <p style="font-size: small;"><i>Tähdellä merkityt kentät ovat pakollisia.</i></p>
+        <form name='Asiakastyytyvaisyys' id="asiakastyytyvaisyys" action='https://printvalues-294008.appspot.com/printvalues' method='post'>
+            <div class="row">
+                <div class="col-kysely-25">
+                    <label for="nimi">Nimesi (vapaaehtoinen)</label>
+                </div>
+                <div class="col-kysely-75">
+                    <input type="text" name="nimi" id="1" value="" onfocus="lomakeFocus(this)"><br>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-kysely-25">
+                    <label for="hoitaja">Kenen hoidossa olit?</label>
+                </div>
+                <div class="col-kysely-75">
+                    <select id="hoitaja" name="hoitaja">
+                            <option value="1">--Valitse lääkäri--</option>
+                            <option value="Hilkka Hammas">Hilkka Hammas</option>
+                            <option value="Jari Juuri">Jari Juuri</option>
+                            <option value="Pekka Paikka">Pekka Paikka</option>
+                            <option value="Anni Amalgaami">Anni Amalgaami</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-kysely-25">
+                   <label for="hoitoalk">Milloin hoito alkoi?</label><label style="color:red;"><sup>*</sup></label>
+               </div>
+               <div class="col-kysely-75">
+                   <input type="date" name="hoitoalk" id="3" value="" onfocus="lomakeFocus(this)" required><br>
+               </div>
+           </div>
+           <div class="row">
+                <div class="col-kysely-25">
+                    <label for="hoitolop">Milloin hoito päättyi?</label><label style="color:red;"><sup>*</sup></label>
+                </div>
+                <div class="col-kysely-75">
+                    <input type="date" name="hoitolop" id="4" value="" onfocus="lomakeFocus(this)" required><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-kysely-25">
+                    <label for="palaute">Risuja/ruusuja/palautetta</label>
+                </div>
+                <div class="col-kysely-75">
+                    <textarea name="palaute" id="5" value="" onfocus="lomakeFocus(this)" maxlength="800"></textarea><br>
+                </div>
+            </div>
+
+        <p>
+
+        </p>
+
+        <h3>Hoitokokonaisuus</h3>
+        <p>Valitse jokaisesta väittämästä numero + tai - painikkeilla tai syöttämällä arvo, joka kuvaa parhaiten mielipidettäsi palvelun laadusta.<br>
+        0=Ei vastausta/en osaa sanoa, 1=Huono, 2=Heikko, 3=Kohtalainen, 4=Hyvä, 5=Erinomainen.</p>
+        <div class="row">
+            <div class="col-hoitokok-1">
+                <label for="kysymys1">1. Asiakaspalvelu oli sujuvaa</label>
+            </div>
+            <div class="col-hoitokok-2">
+                <input type="button" value="-" onclick="vahenna(this.form.arvosana1);">
+                <input type="text" id="arvosana1" name="arvosana1" value="0" onkeyup="tarkista(this);" onkeypress="return tarkistaNumero(event)"> 
+                <input type="button" value="+" onclick="lisaa(this.form.arvosana1);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-hoitokok-1">
+                <label for="kysymys2">2. Ajanvaraus oli sujuvaa</label>
+            </div>
+            <div class="col-hoitokok-2">
+                <input type="button" value="-" onclick="vahenna(this.form.arvosana2);">
+                <input type="text" id="arvosana2" name="arvosana2" value="0" onkeyup="tarkista(this);" onkeypress="return tarkistaNumero(event)">
+                <input type="button" value="+" onclick="lisaa(this.form.arvosana2);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-hoitokok-1">
+                <label for="kysymys3">3. Annettu kokonaiskustannusarvio piti paikkaansa</label>
+            </div>
+            <div class="col-hoitokok-2">
+                <input type="button" value="-" onclick="vahenna(this.form.arvosana3);">
+                <input type="text" id="arvosana3" name="arvosana3" value="0" onkeyup="tarkista(this);" onkeypress="return tarkistaNumero(event)">
+                <input type="button" value="+" onclick="lisaa(this.form.arvosana3);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-hoitokok-1">
+                <label for="kysymys4">4. Hoitohenkilökunta keskusteli kanssani minulle tehtävistä hoidoista</label>
+            </div>
+            <div class="col-hoitokok-2">
+                <input type="button" value="-" onclick="vahenna(this.form.arvosana4);">
+                <input type="text" id="arvosana4" name="arvosana4" value="0" onkeyup="tarkista(this);" onkeypress="return tarkistaNumero(event)">
+                <input type="button" value="+" onclick="lisaa(this.form.arvosana4);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-hoitokok-1">
+                <label for="kysymys5">5. Sain riittävät kotihoito-ohjeet</label>
+            </div>
+            <div class="col-hoitokok-2">
+                <input type="button" value="-" onclick="vahenna(this.form.arvosana5);">
+                <input type="text" id="arvosana5" name="arvosana5" value="0" onkeyup="tarkista(this);" onkeypress="return tarkistaNumero(event)">
+                <input type="button" value="+" onclick="lisaa(this.form.arvosana5);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-hoitokok-1">
+                <label for="kysymys6">6. Yleisarvosana saamastani hoidosta</label>
+            </div>
+            <div class="col-hoitokok-2">
+                <input type="button" value="-" onclick="vahenna(this.form.arvosana6);">
+                <input type="text" id="arvosana6" name="arvosana6" value="0" onkeyup="tarkista(this);" onkeypress="return tarkistaNumero(event)">
+                <input type="button" value="+" onclick="lisaa(this.form.arvosana6);">
+            </div>
+        </div>
+
+        <button class="button" input type="submit" name="laheta" value="Lähetä palaute" onclick="varmista()">Lähetä palaute</button>
+        <button class="button" input type="reset" value="Tyhjennä lomake">Tyhjennä lomake </button>
+        </form>
+    </div>
+</div>
+
+    <div class="footer">
+    <p>RIP-Hammaslääkärit Oy <br>
+    Kotikatu 1<br>
+    33100 Tampere<br>
+    </p>
+    </div>
+</body>
+
+</html>
