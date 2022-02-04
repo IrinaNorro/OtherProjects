@@ -7,6 +7,7 @@ My parts of the prpoject are:
 - Rip_ajanvaraus.html
 - Rip_ajanvaraus.js
 - Rip_ajanvaraus_styles-css <br>
-- In this web page project I designed a registration form.  It is not perfect, this is my first web page.
+
+In this web page project I designed a registration form.  It is not perfect, this is my first web page.
 
 
