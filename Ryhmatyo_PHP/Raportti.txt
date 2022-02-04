@@ -1,0 +1,108 @@
+RYHMä-WEBIT: Katja Ikonen, Saara Lehtimäki, Irina Norro
+<p>Aloituspalaveri 25.1.2021 
+
+
+<p>Valittiin tehtäväksi vieraskirja.
+ 
+<p>Sovelluksessa käyttäjä voi kirjoittaa ja lukea viestejä. Ylläpitäjä voi muuttaa ja poistaa viestejä ja ehkä 
+vastata viesteihin. Ylläpitopuoli on suojattu "htaccessilla". 
+
+<p>Vastuualueet:  
+
+
+<p>- Irina: Tietokantaan kirjoittaminen. 
+
+<br>- Katja Tietokannasta lukeminen. 
+
+<br>- Saara: Ylläpitäjä voi muuttaa ja poistaa viestejä, ehkä myös vastata viesteihin. 
+ 
+
+<p>+ ylläpidon suojaus “htaccessilla” 
+
+<p>Aluksi selvitetään luentomateriaalin avulla, miten mikäkin osuus tehdään. 
+
+<p>Väliraportti 
+
+<p>Irina selvitti, kuinka tietokantaan kirjoittaminen toimii, ja selvitti siihen liittyvät haasteet. Jostain syystä 
+tietokantaan ei tallentunut tietoa, nyt toimii. Samalla tuli katsoneeksi, kuinka tietokannasta luetaan ja miten viestejä poistetaan. Selvitteli vielä, saako lisättyä tiedostoon poista-nappi (submit button tai input submit) linkin sijaan, mutta tämä selvittely vielä kesken.  
+
+<p>Muokkasi myös ryhmätyölle sopivan nettisivupohjan vanhasta ryhmätyöstä. Kokeili tietokantaa omilla tunnuksilla.  
+
+<p>Myös textfieldin kirjoittaminen tietokantaan toimii. Vielä on epäselvää kuinka pitkää tekstiä voi kirjoittaa ja se myös pohdituttaa, miten tietokannasta pitkän viestin lukeminen sivulla näkyy nätisti halutussa kohdassa. 
+
+<p>Katja selvitti miten luetaan vieraskirjaa tietokannasta, jätetään ID:t tulostamatta ja saadaan lisättyä aika, milloin viesti jätetään. Tulostaminen onnistuu php-tiedostossa, mutta html-sivulle laitettuna tökkii. Jatketaan sen selvittämistä. Selvitteli myös ylläpitäjän sisäänkirjautumista sessioiden kautta. Loi oman tietokannan vieraskirjaan kirjoittamsita harjoittelua varten. 
+
+ 
+<p>Palaveri 29.1.2021  
+
+<p>Saara yrittänyt selvittää htaccessin toimintaa, vielä selvitys kesken. Yrittää viikonlopun/alkuviikon aikana selvittää asiaa lisää ja saada testattua Irinan tekemään nettisivuun yhdistettynä.  
+
+<p>Sovittu, että Saara ja Katja perehtyvät ylläpitopuoleen ja selvittävät, miten ylläpitoa varten saadaan rakennettua viestien poistaminen ja viesteihin vastaaminen yksinkertaisesti.  
+
+<p>Palaveri 2.2.2021 
+
+<p>Saara saanut rakennettua sivulla sisäänkirjautumis-linkin, joka on suojattu .htaccessilla.  
+
+<p>Katja sai vieraskirjan viestien poistaminen toimimaan.
+
+<p>Selvitettävä, miten viestejä saadaan muokattua. Tällä hetkellä viestien muokkaus ei toimi. Katja sai palaverin jälkeen toimimaan muokkauksen. 
+
+<p>Selvitettävä, miten vieraskirjaan kirjoitettavat viestit saadaan näkyviin sivustolla järkevästi.
+
+<p>Selvitettävä, miten admin-käyttäjä voi vastata vieraskirjaan kirjoitettuihin viesteihin ja miten nämä vastaukset saadaan näkyviin muille käyttäjille 
+
+<p>Pohdittu parasta ratkaisua vieraskirjan viestien esittämiselle. Paras ratkaisu voisi olla toteuttaa vieraskirja niin, että viestien kirjoittamiselle on oma ikkuna ja viestien lukemiselle oma ikkuna. Selvitettävä vielä, miten viestit saataisiin tulostumaan tietokannasta niin, että tekstiä on mukava lukea.  
+
+<p>Sovittu, että ensisijaisesti yritetään saada muokkaus- ja vastaustoiminnot toimimaan admin-puolella.  
+
+<p>Seuraavan palaverin ajankohta sovitaan teamsin välityksellä.  
+
+ 
+
+<p>Väliraportti 3.2.2021 
+
+<p>Irina koitti saada tietokantaan tallennukset toimimaan, virhe ei selvinnyt. Muokkasi viestien tulostusta.  
+
+
+<p>Palaveri 4.2.2021 
+
+<p>Saara yhdistää loppuviikon aikana ylläpidon sivun muuhun sivustoon 
+
+<p>Saara siirtää poisto/muokkaus-toiminnot ylläpidon sivulle pois ns. normaalilta käyttäjältä.
+
+<p>Saara selvittää, miten viesteihin vastaaminen voisi onnistua. 
+
+<p>Irina yrittää selvittää, miten vieraskirjan taulukkoa saisi leveämmäksi ja poistaa muokkausnäkymästä vieraskirjan tulostuksen. 
+
+
+<p>6.-7.2.2021 
+
+<p>Saara yrittänyt selvittää, miten vastaustoiminto saataisiin toimimaan sivustolla. Yritysten ja lukuisten googletusten jälkeen toiminnon rakentaminen tuntuu tällä osaamisella liian vaikealta ja aikaa vievältä.  
+
+
+<p>8.2.2021 Katselmointi klo 18.00 
+
+<p>Käytiin läpi tämänhetkinen ohjelman toiminta opettajan kanssa. Ohjelman eri osiot on saatu kaikki toimimaan. Päätettiin kuitenkin vielä, että koitetaan lisätä Ajaxia lomakkeelle. Samoin korjataan pois die-functiot tietokantaan yhdistämisen kohdalta, jotta ei jää vahingossa salasanoja näkyviin virhetilanteissa.  
+
+<p>Sovittava vielä loppuviikosta palautuksen hoitaminen (tietokannan kopiointi yms) ja kuka tekee virallisen zip-tiedoston palauttamista varten. 
+
+ 
+
+<p>9-12.2.201 
+
+<p>Irina yritti selvittää miten Jquery-Ajax saadaan lisättyä sivulle. Sai toimimaan siihen pisteeseen, että Ajaxilla sai siirrettyä tyhjää dataa tietokantaan ja takaisin tietokannasta sivulle, mutta jostain syystä tietokantaan ei tallentunut mitään tietoja lomakekentiltä. Sai sitten toimimaan tekstitiedoston tekstin tuomisen nettisivulle Ajaxilla, joten lomakkeen käsittely Ajaxilla unohdettiin.
+ 
+<p>die-funktiot siivottiin pois koodista mahdollisten tietoturvaongelmien vuoksi.
+
+<p>Katja lisäsi paluulinkin Admin-osiosta takaisin vieraskirjaan. Muutti myös vieraskirjan lajittelun siten, että uusimmat viestit näkyvät ylhäällä. Sai kirjoituksen Ajaxilla toimimaan mutta ei vielä ehtinyt selvittää, miten saisi LueTietokannasta.php:n päivittymään samalla.
+
+<p>Loppuraportti:
+
+<p>Vieraskirja saatiin toimimaan ja siinä oli kaikki vaaditut perustoiminnot. Ajaxi-osuus lisättiin vielä katselmoinnin jälkeen raportti -sivulle mutta koska tietokannan lukemistä Ajaxilla ei ehditty selvittämään, päätettiin se jättää tästä palautuksesta. 
+Projekti onnistui kokonaisuudessaan hyvin. 
+
+<p>Kommunikointi tiimin jäsenten kesken sujui hyvin ja tehtävät saatiin jaettua hyvin tasan, lisäksi tiimiläiset auttoivat toisiaan tarvittaessa ja pohtivat ongelmia myös yhdessä. Yhteyttä pidettiin Teams -palaverien lisäksi myös jatkuvissa Teams -keskuteluissa, jonne lisäiltiin koodinpätkiä yms. tietoa, mitä kukin oli onnistunut selvittämään. Lisäksi käytiin yhdessä asioita (esim. htaccessin toiminta) läpi, jotta kaikilla ryhmän jäsenistä oli tieto, miten eri osuudet toimivat.
+Projektin myötä opimme paljon ja PHP-koodi alkoi pikkuhiljaa hahmottumaan projektin kuluessa. 
+
+<p>Työssä emme käyttäneet BitBucketia mutta jälkeenpäin katsottuna se olisi saattanut olla kätevämpi keino. Nyt vain päivitimme vain U-asemalle omaan kansioomme 
+numeroituna aina uudet versiot, sitä mukaa kun saimme niitä tehtyä. Ja yhdistelimme ne aina omiin versioihimme.

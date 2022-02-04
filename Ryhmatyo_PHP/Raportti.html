@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fin">
+<head>
+<title>Webit - Ryhmätyö</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+
+  <div class="header">
+  </div>
+
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.php">Tutustu vuokramökkeihin</a>
+    <a href="index.php">Varaa lomamökkisi</a>
+    <a href="index.php">Anna palautetta</a>
+    <a href="index.php">Yhteystiedot</a>
+    <a href="Admin/LueTietokannasta.php">Kirjaudu sisään</a>
+    <a href="Raportti.html">Ryhmätyön raportti</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+<div class="column" id="">
+<br>
+<br>
+<br>
+<br>
+</div>
+
+  <h3>Raportti</h3>
+<div class="column" id="rapsa">
+    
+<button>Klikkaa tästä raportti auki</button>
+
+
+</div>
+
+</div>
+
+<div class="footer" id="">
+<br>
+<br>
+</div>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#rapsa").load("Raportti.txt");
+  });
+});
+</script>
+</body>
+</html>
+
+

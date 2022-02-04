@@ -1,0 +1,16 @@
+
+mysql> select * from katjan_vieraskirja;
++-----+---------+----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+| id  | etunimi | sukunimi             | viesti                                                                                                                                                 | aika                |
++-----+---------+----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+|  22 | Saara   | Testi                | Testi testi testi edit edit                                                                                                                            | 2021-02-08 04:39:40 |
+|  25 | Saara   | Testaa ja MUOKKAA    | Moi!                                                                                                                                                   | 2021-02-05 11:44:50 |
+|  28 | Tadaa   | TÃ¤ttÃ¤rÃ¤Ã¤         | Heippa TÃ„TÃ„ MÃ„ MUOKKAAN!                                                                                                                            | 2021-02-05 12:05:12 |
+|  35 | Sanna   | HÃ¤mÃ¤lÃ¤inen        | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestia | 2021-02-08 03:44:16 |
+|  42 | Saara   | Testaa               | jÃ¤lleen                                                                                                                                               | 2021-02-09 01:37:09 |
+|  43 | Irina   | Norro                | die funktiot poistettu ja lisÃ¤tty virheilmoitus-sivu                                                                                                  | 2021-02-09 01:47:16 |
+|  44 | testi   | testi                | virheilmoitus sivu toimii                                                                                                                              | 2021-02-09 01:48:38 |
+| 116 | Iines   | Ankka                | Testataan vieraskirjan pÃ¤ivÃ¤mÃ¤Ã¤rÃ¤lajittelua.                                                                                                      | 2021-02-13 11:48:18 |
+| 118 | Musta   | Kaapu                | Uusin viesti.                                                                                                                                          | 2021-02-14 12:44:31 |
+| 119 | Irina   | testaa               | test test                                                                                                                                              | 2021-02-15 01:33:34 |
++-----+---------+----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
