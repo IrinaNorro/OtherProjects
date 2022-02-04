@@ -23,6 +23,6 @@ My parts of the project are:
 - LueTietokannasta.php
 - Virheilmoitus.html
 
-### Thanks taking time to see my projects!
+### Thanks for taking time to see my projects!
 
 
