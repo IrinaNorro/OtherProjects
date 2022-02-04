@@ -4,6 +4,7 @@
 ### RIP Hammaslääkärit - WEB Page
 
 This is a school group project, designed together with Riitta Vaartio and Petri Rantanen. 
+We designed a web page for Dental Services. 
 My parts of the prpoject are:
 - Rip_ajanvaraus.html
 - Rip_ajanvaraus.js
@@ -17,9 +18,11 @@ This is a school project made in group together with Saara Lehtimäki and Katja 
 We designed a guest book for rental cottage. 
 This project works around databases and PHP. Used also MySQL to create and store DataBase.
 We used also htAccess for safer Admin Access into web page. 
-My part of the project:
+My parts of the project are:
 - index.php
 - LueTietokannasta.php
 - Virheilmoitus.html
+
+### Thanks taking time to see my projects!
 
 
