@@ -23,6 +23,11 @@ My parts of the project are:
 - LueTietokannasta.php
 - Virheilmoitus.html
 
+### School Project on UX/UI Design using FIGMA
+This is a school project made together with Saara Lehtimäki and Riitta Vaartio. 
+Here we explored world of UX/UI design using FIGMA. This is a report of team work. 
+Screen shots of FIGMA included. 
+
 ### Thanks for taking time to see my projects!
 
 
